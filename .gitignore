@@ -1,5 +1,8 @@
-*.pyc
 *.iml
+*.pyc
 
+.gradle/
 .idea/
+build/
 spec/
+CMakeFiles/
