@@ -1,18 +1,15 @@
-import java.util.HashMap;
 import java.util.Map;
-import java.util.regex.Matcher;
+import java.util.function.Function;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 class WordCount {
-    private final Pattern pattern = Pattern.compile("\\b(\\w+)\\b");
+    private final Pattern pattern = Pattern.compile("[^\\w\\d]+");
 
     Map<String, Integer> phrase(String words) {
-        Map<String, Integer> ret = new HashMap<>();
-        Matcher matcher = pattern.matcher(words.toLowerCase());
-        while (matcher.find()) {
-            String word = matcher.group();
-            ret.put(word, ret.getOrDefault(word, 0) + 1);
-        }
-        return ret;
+
+        return pattern.splitAsStream(words.toLowerCase())
+                .collect(Collectors.groupingBy(Function.identity(),
+                        Collectors.summingInt(v -> 1)));
     }
 }

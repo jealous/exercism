@@ -1,8 +1,23 @@
+CMakeCache.txt
+
 *.iml
 *.pyc
+*.vcxproj
+*.vcxproj.filters
+*.sln
+*.cmake
+*.vc.db
+*.user
 
 .gradle/
 .idea/
 build/
 spec/
 CMakeFiles/
+.vs/
+*.dir/
+Win32/
+Win64/
+x64/
+Debug/
+Release/
