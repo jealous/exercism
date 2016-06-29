@@ -1,9 +1,9 @@
-__author__ = 'Cedric Zhuang'
-
-from string import maketrans
+from string import maketrans, lowercase
 import re
 
-alphabet = "abcdefghijklmnopqrstuvwxyz"
+__author__ = 'Cedric Zhuang'
+
+alphabet = lowercase
 
 cipher_key = maketrans(alphabet, alphabet[::-1])
 

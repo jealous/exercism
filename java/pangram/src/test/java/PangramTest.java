@@ -1,7 +1,7 @@
 import org.junit.Test;
 
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class PangramTest {
 
@@ -28,6 +28,11 @@ public class PangramTest {
     @Test
     public void nonAsciiCharacters() {
         assertTrue(Pangrams.isPangram("Victor jagt zwölf Boxkämpfer quer über den großen Sylter Deich."));
+    }
+
+    @Test
+    public void specialCharacters() {
+        assertFalse(Pangrams.isPangram("Five quacking fox jolt my wax bed 1234567890."));
     }
 
 }
