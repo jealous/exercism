@@ -6,8 +6,11 @@
 
 namespace etl
 {
-	using namespace std;
 
-	const map<char, int> transform(const map<int, vector<char>> old);
+using std::map;
+using std::vector;
+
+const map<char, int> transform(const map<int, vector<char>>& old);
+
 }
 #endif

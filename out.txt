@@ -1,0 +1,118 @@
+
+C:\work\exercism>naviseccli -h 10.244.211.30 -user sysadmin -password sysadmin -scope 0 storagegroup -messner -list -host -iscsiAttributes 
+
+Storage Group Name:    ~physical
+Storage Group UID:     60:06:01:60:00:00:00:00:00:00:00:00:00:00:00:01
+
+HLU/ALU Pairs:
+
+  HLU Number     ALU Number
+  ----------     ----------
+    17              17
+    18              18
+    19              19
+    20              20
+    21              21
+    22              22
+    23              23
+    24              24
+    25              25
+    114             114
+    115             115
+    116             116
+    117             117
+    118             118
+    1               1
+    2               2
+    3               3
+Special:               YES
+Shareable:             YES
+
+Storage Group Name:    ~management
+Storage Group UID:     60:06:01:60:00:00:00:00:00:00:00:00:00:00:00:02
+HBA/SP Pairs:
+
+  HBA UID                                          SP Name     SPPort
+  -------                                          -------     ------ 
+  50:06:01:60:B6:E0:15:26:50:06:01:69:36:E0:15:26   SP B         1
+Host name:             APM00152312055-spB
+SPPort:                B-1v0
+Initiator IP:          N/A
+TPGT:                  0
+ISID:                  N/A
+
+  50:06:01:60:B6:E0:15:26:50:06:01:61:36:E0:15:26   SP A         1
+Host name:             APM00152312055-spA
+SPPort:                A-1v0
+Initiator IP:          N/A
+TPGT:                  0
+ISID:                  N/A
+
+Special:               YES
+Default:               YES
+Shareable:             YES
+
+Storage Group Name:    ~filestorage
+Storage Group UID:     60:06:01:60:00:00:00:00:00:00:00:00:00:00:00:04
+HBA/SP Pairs:
+
+  HBA UID                                          SP Name     SPPort
+  -------                                          -------     ------ 
+  50:06:01:60:C7:A0:02:45:50:06:01:68:47:A0:02:45   SP A         13
+Host name:             Celerra_CS0_21132
+SPPort:                A-13v0
+Initiator IP:          N/A
+TPGT:                  0
+ISID:                  N/A
+
+  50:06:01:60:C7:A0:02:45:50:06:01:61:47:A0:02:45   SP B         12
+Host name:             Celerra_CS0_21132
+SPPort:                B-12v0
+Initiator IP:          N/A
+TPGT:                  0
+ISID:                  N/A
+
+  50:06:01:60:C7:A0:02:45:50:06:01:69:47:A0:02:45   SP B         13
+Host name:             Celerra_CS0_21132
+SPPort:                B-13v0
+Initiator IP:          N/A
+TPGT:                  0
+ISID:                  N/A
+
+  50:06:01:60:C7:A0:02:45:50:06:01:60:47:A0:02:45   SP A         12
+Host name:             Celerra_CS0_21132
+SPPort:                A-12v0
+Initiator IP:          N/A
+TPGT:                  0
+ISID:                  N/A
+
+
+HLU/ALU Pairs:
+
+  HLU Number     ALU Number
+  ----------     ----------
+    5               63994
+    3               63995
+    2               63996
+    4               63997
+    1               63998
+    0               63999
+    21              22
+    22              23
+    23              24
+    24              25
+    17              17
+    16              18
+    18              21
+    19              19
+    20              20
+    114             114
+    115             115
+    116             116
+    117             117
+    118             118
+    9               2
+    8               1
+Special:               YES
+Shareable:             YES
+

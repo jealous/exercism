@@ -17,7 +17,7 @@ const testVersion = 1
 
 // date formats used in test data
 const (
-	fmtD  = "2006-01-02"
+	fmtD = "2006-01-02"
 	fmtDT = "2006-01-02T15:04:05"
 )
 
@@ -56,7 +56,7 @@ func parse(s string, f string, t *testing.T) time.Time {
 		} else {
 			t.Log(err)
 			t.Skip("(Not your problem.  " +
-				"please file issue at https://github.com/exercism/xgo.)")
+			"please file issue at https://github.com/exercism/xgo.)")
 		}
 	}
 	return tt
