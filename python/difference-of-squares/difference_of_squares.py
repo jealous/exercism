@@ -1,3 +1,5 @@
+from functools import reduce
+
 __author__ = 'Cedric Zhuang'
 
 

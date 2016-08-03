@@ -3,7 +3,7 @@ __author__ = 'Cedric Zhuang'
 
 class Luhn(object):
     def __init__(self, number):
-        self.arr = map(int, str(number))
+        self.arr = list(map(int, str(number)))
 
     @classmethod
     def create(cls, number):
@@ -15,7 +15,7 @@ class Luhn(object):
     def addends(self):
         ret = self.arr[:]
         length = len(self.arr)
-        for i in xrange(length-2, -1, -2):
+        for i in range(length - 2, -1, -2):
             n = self.arr[i] * 2
             if n >= 10:
                 n -= 9

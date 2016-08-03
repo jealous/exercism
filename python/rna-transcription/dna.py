@@ -1,9 +1,8 @@
 __author__ = 'Cedric Zhuang'
 
-from string import maketrans
 
-dna_to_rna = maketrans("GCTA", "CGAU")
+dna_to_rna = dict(zip("GCTA", "CGAU"))
 
 
 def to_rna(dna):
-    return dna.translate(dna_to_rna)
+    return ''.join(dna_to_rna[i] for i in dna)

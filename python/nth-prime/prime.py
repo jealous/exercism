@@ -1,16 +1,13 @@
 # coding=utf-8
 from __future__ import unicode_literals
-import math
 
 __author__ = 'Cedric Zhuang'
-
-_primes = [2]
 
 
 def _find_next_prime():
     n = 3
     while True:
-        root = int(math.floor(math.sqrt(n)))
+        root = int(n ** 0.5)
         for i in _primes:
             if n % i == 0:
                 break
@@ -21,6 +18,7 @@ def _find_next_prime():
         n += 2
 
 
+_primes = [2]
 _prime_gen = _find_next_prime()
 
 

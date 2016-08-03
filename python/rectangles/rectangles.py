@@ -7,10 +7,9 @@ __author__ = 'Cedric Zhuang'
 
 
 def next_cross(lines):
-    for i, line in enumerate(lines):
-        for j, v in enumerate(line):
-            if v == '+':
-                yield (i, j)
+    return ((i, j) for i, line in enumerate(lines)
+            for j, v in enumerate(line)
+            if v == '+')
 
 
 def is_connected(p1, p2, lines):

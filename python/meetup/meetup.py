@@ -1,6 +1,6 @@
-__author__ = 'Cedric Zhuang'
-
 from datetime import date, timedelta
+
+__author__ = 'Cedric Zhuang'
 
 criteria_map = {'teenth': 12,
                 '1st': 0 * 7,

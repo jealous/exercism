@@ -1,6 +1,7 @@
-__author__ = 'Cedric Zhuang'
-
+from functools import reduce
 from operator import mul
+
+__author__ = 'Cedric Zhuang'
 
 
 def largest_product(sequence, length):
@@ -12,6 +13,6 @@ def slices(sequence, length):
     slen = len(sequence)
     if length > slen or slen > length == 0:
         raise ValueError()
-    ints = map(int, list(sequence))
+    ints = list(map(int, list(sequence)))
     return [ints[index:index + length]
-            for index in xrange(len(ints) - length + 1)]
+            for index in range(len(ints) - length + 1)]

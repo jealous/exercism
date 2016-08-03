@@ -2,8 +2,6 @@ __author__ = 'Cedric Zhuang'
 
 
 def transform(old):
-    new = {}
-    for k, v in old.iteritems():
-        for i in v:
-            new[i.lower()] = k
-    return new
+    return {i.lower(): k
+            for k, v in old.items()
+            for i in v}

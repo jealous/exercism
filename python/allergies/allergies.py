@@ -8,7 +8,7 @@ class Allergies:
     def __init__(self, score):
         self.list = [Allergies.foods[i]
                      for i in range(len(Allergies.foods))
-                     if score & 2 ** i]
+                     if score & 1 << i]
 
     def is_allergic_to(self, food):
         return food in self.list

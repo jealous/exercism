@@ -8,7 +8,8 @@ __author__ = 'Cedric Zhuang'
 
 
 def encode(raw):
-    normalized = filter(lambda c: c in string.digits + string.lowercase,
-                        raw.lower())
-    column = int(math.ceil(math.sqrt(len(normalized))))
-    return ' '.join(normalized[i::column] for i in range(0, column))
+    normalized = ''.join(
+        filter(lambda c: c in string.digits + string.ascii_lowercase,
+               raw.lower()))
+    column = int(math.ceil(len(normalized) ** 0.5))
+    return ' '.join(normalized[i::column] for i in range(column))

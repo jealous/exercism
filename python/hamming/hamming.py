@@ -1,6 +1,6 @@
-__author__ = 'Cedric Zhuang'
-
 from operator import ne
+
+__author__ = 'Cedric Zhuang'
 
 
 # came from facerolling's version at

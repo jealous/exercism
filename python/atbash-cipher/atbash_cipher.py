@@ -1,20 +1,20 @@
-from string import maketrans, lowercase
+from string import ascii_lowercase
 import re
 
 __author__ = 'Cedric Zhuang'
 
-alphabet = lowercase
+alphabet = ascii_lowercase
 
-cipher_key = maketrans(alphabet, alphabet[::-1])
+cipher_key = dict(zip(alphabet, alphabet[::-1]))
 
 
 def decode(s):
     s = re.sub('\s', '', s)
-    return s.translate(cipher_key)
+    return ''.join(map(lambda x: cipher_key.get(x, x), s))
 
 
 def encode(s):
     s = s.lower()
-    s = re.sub('[\s\.,]', '', s)
-    translated = s.translate(cipher_key)
+    s = re.sub(r'[\s.,]', '', s)
+    translated = ''.join(map(lambda x: cipher_key.get(x, x), s))
     return re.sub('(.{5})', '\g<0> ', translated).strip()
