@@ -28,8 +28,7 @@ func Handshake(n int) []string {
 	return r
 }
 
-
-func reverse(p *[]string) *[]string{
+func reverse(p *[]string) *[]string {
 	r := *p
 	for i := len(r)/2 - 1; i >= 0; i-- {
 		opp := len(r) - 1 - i

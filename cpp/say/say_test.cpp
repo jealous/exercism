@@ -7,7 +7,6 @@ BOOST_AUTO_TEST_CASE(zero)
     BOOST_REQUIRE_EQUAL("zero", say::in_english(0ULL));
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(one)
 {
     BOOST_REQUIRE_EQUAL("one", say::in_english(1ULL));
@@ -92,4 +91,3 @@ BOOST_AUTO_TEST_CASE(raises_an_error_for_one_trillion)
 {
     BOOST_REQUIRE_THROW(say::in_english(1000ULL*1000ULL*1000ULL*1000ULL), std::domain_error);
 }
-#endif
