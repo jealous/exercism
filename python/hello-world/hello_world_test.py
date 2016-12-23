@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# coding=utf-8
 
 from __future__ import unicode_literals
 import unittest
@@ -6,7 +6,7 @@ import unittest
 import hello_world
 
 
-class BobTests(unittest.TestCase):
+class HelloWorldTests(unittest.TestCase):
 
     def test_hello_without_name(self):
         self.assertEqual(

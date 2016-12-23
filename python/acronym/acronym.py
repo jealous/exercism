@@ -1,11 +1,6 @@
-# coding=utf-8
-from __future__ import unicode_literals
-
 import re
 
-__author__ = 'Cedric Zhuang'
 
-
-def abbreviate(full):
-    arr = re.findall(r'[A-Z]+[a-z]*|[a-z]+', full)
-    return ''.join(map(lambda x: x[0], arr)).upper()
+def abbreviate(value):
+    arr = re.findall(r'[A-Z]+[a-z]*|[a-z]+', value)
+    return ''.join(word[0] for word in arr).upper()

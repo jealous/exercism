@@ -8,7 +8,7 @@ _OPERATOR_MAP = {
     'plus': operator.add,
     'minus': operator.sub,
     'multiplied': operator.mul,
-    'divided': operator.div
+    'divided': operator.truediv
 }
 
 

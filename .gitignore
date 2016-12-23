@@ -1,4 +1,5 @@
 CMakeCache.txt
+.keep
 
 *.iml
 *.pyc
@@ -21,3 +22,8 @@ Win64/
 x64/
 Debug/
 Release/
+target/
+.cache/
+.coverage
+htmlcov/
+venv/

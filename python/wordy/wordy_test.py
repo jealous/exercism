@@ -4,7 +4,6 @@ from wordy import calculate
 
 
 class WordyTest(unittest.TestCase):
-
     def test_simple_add_1(self):
         self.assertEqual(18, calculate("What is 5 plus 13?"))
 

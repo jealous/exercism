@@ -1,11 +1,9 @@
 from collections import defaultdict
 
-__author__ = 'Cedric Zhuang'
-
 
 class School(object):
-    def __init__(self, school_name):
-        self._school_name = school_name
+    def __init__(self, name):
+        self.name = name
         self._db = defaultdict(set)
 
     @property
@@ -13,11 +11,12 @@ class School(object):
         return self._db
 
     def add(self, name, grade):
-        self._db[grade].add(name)
+        names = self.db[grade]
+        names.add(name)
 
-    def grade(self, grade):
-        return self.db[grade]
+    def grade(self, grade_no):
+        return self.db[grade_no]
 
     def sort(self):
-        for grade in sorted(self.db.keys()):
-            yield (grade, tuple(sorted(self.db[grade])))
+        return ((grade, tuple(sorted(list(self.db[grade]))))
+                for grade in sorted(self.db.keys()))

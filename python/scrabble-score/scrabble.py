@@ -1,23 +1,19 @@
-# coding=utf-8
-__author__ = 'Cedric Zhuang'
-
-_score_map = {
+score_mpa = {
     'aeioulnrst': 1,
     'dg': 2,
     'bcmp': 3,
     'fhvwy': 4,
     'k': 5,
     'jx': 8,
-    'qz': 10
+    'qz': 10,
 }
 
-SCORE_MAP = {char: score
-             for (letters, score) in _score_map.items()
-             for char in letters}
+SCORE_MAP = {c: v
+             for k, v in score_mpa.items()
+             for c in k}
 
 
-def score(word):
-    if not word.isalpha():
-        word = ''
-
-    return sum(map(SCORE_MAP.get, word.lower()))
+def score(value):
+    if not value.isalpha():
+        value = ''
+    return sum([SCORE_MAP[c] for c in value.lower()])

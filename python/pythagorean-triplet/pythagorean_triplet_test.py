@@ -40,7 +40,6 @@ from pythagorean_triplet import (primitive_triplets, triplets_in_range,
 
 
 class PythagoreanTripletTest(unittest.TestCase):
-
     def test_triplet1(self):
         ans = {(3, 4, 5)}
         self.assertEqual(ans, primitive_triplets(4))
@@ -60,7 +59,7 @@ class PythagoreanTripletTest(unittest.TestCase):
         self.assertEqual(ans, primitive_triplets(288))
 
     def test_triplet5(self):
-        ans = {(100000, 9765369, 9765881), (100000, 2499999999L, 2500000001L)}
+        ans = {(100000, 9765369, 9765881), (100000, 2499999999, 2500000001)}
         self.assertEqual(ans, primitive_triplets(100000))
 
     def test_range1(self):
@@ -91,6 +90,7 @@ class PythagoreanTripletTest(unittest.TestCase):
         self.assertEqual(True, is_coprime(1001, 1003))
         self.assertEqual(False, is_coprime(555, 777))
         self.assertEqual(True, is_coprime(42, 1))
+
 
 if __name__ == '__main__':
     unittest.main()

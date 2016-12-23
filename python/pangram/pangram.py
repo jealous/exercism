@@ -1,5 +1,6 @@
 # coding=utf-8
+import string
 
 
 def is_pangram(s):
-    return len(set(s.lower())) >= 27
+    return set(string.ascii_lowercase) - set(s.lower()) == set()
