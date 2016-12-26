@@ -6,7 +6,7 @@ import scala.collection.immutable.SortedMap
   *
   */
 class School {
-  var _db: Map[Int, Seq[String]] = SortedMap()
+  private var _db: Map[Int, Seq[String]] = SortedMap()
 
   def db: Map[Int, Seq[String]] = _db
 
